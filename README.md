@@ -15,3 +15,9 @@ EKS Cluster creation with Terraform modules using remote state backend
     terraform validate
     terraform plan
     tf apply -auto-approve
+
+  ## Clean Up
+  Remove the imported remote state backend
+
+     terraform state rm aws_s3_bucket.terraform_state
+     tf destroy -auto-approve
